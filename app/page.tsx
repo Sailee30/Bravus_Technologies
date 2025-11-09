@@ -16,6 +16,7 @@ export default function HomePage() {
 const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 const [currentSlide, setCurrentSlide] = useState(0)
 const [showAll, setShowAll] = useState(false)
+const [testimonialsPerSlide, setTestimonialsPerSlide] = useState(3)
 
   const testimonials = [
     {
@@ -74,7 +75,6 @@ const [showAll, setShowAll] = useState(false)
     }
   ]
 
-  const testimonialsPerSlide = 3
   const totalSlides = Math.ceil(testimonials.length / testimonialsPerSlide)
 
   const nextSlide = () => {
@@ -111,6 +111,20 @@ const [showAll, setShowAll] = useState(false)
 
     return () => clearInterval(timer)
   }, [])
+
+  useEffect(() => {
+  const handleResize = () => {
+    if (window.innerWidth < 768) {
+      setTestimonialsPerSlide(1)
+    } else {
+      setTestimonialsPerSlide(3)
+    }
+  }
+
+  handleResize()
+  window.addEventListener("resize", handleResize)
+  return () => window.removeEventListener("resize", handleResize)
+}, [])
 
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
