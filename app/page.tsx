@@ -776,10 +776,17 @@ const [testimonialsPerSlide, setTestimonialsPerSlide] = useState(3)
           </div>
         )}
 
+<<<<<<< HEAD
       <main className="relative z-10 flex flex-col items-start justify-start sm:justify-center min-h-[calc(100vh-80px)] px-4 sm:px-6 lg:px-12 max-w-6xl pt-8 sm:pt-6 lg:pt-12 pl-4 sm:pl-12 lg:pl-20">
         <div className="mt-12 sm:mt-16 mb-6 sm:mb-8 w-full">
           <div className="inline-flex items-center bg-orange-500/20 backdrop-blur-sm border border-orange-400/30 rounded-full px-3 sm:px-4 py-2 whitespace-nowrap text-xs sm:text-xs">
             <span className="text-white font-medium">360° Business Support</span>
+=======
+      <main className="relative z-10 flex flex-col items-start justify-start sm:justify-center min-h-[calc(100vh-80px)] px-4 sm:px-6 lg:px-12 max-w-6xl pt-20 sm:pt-24 lg:pt-32 pl-6 sm:pl-12 lg:pl-20">
+        <div className="mb-4 sm:mb-8">
+          <div className="inline-flex items-center bg-orange-500/20 backdrop-blur-sm border border-orange-400/30 rounded-full px-3 sm:px-4 py-2">
+            <span className="text-white text-xs md:text-xs font-medium">360° Business Support</span>
+>>>>>>> 769c669c271cdb8749887bf4a3702e1e8ceea9fc
         </div>
       </div>
           <span>
