@@ -31,7 +31,7 @@ const ModernNavbar = () => {
     },
     {
     name: "Blogs",
-    link: "/blogs",
+    link: "/blog",
    },
     {
       name: "Contact",
