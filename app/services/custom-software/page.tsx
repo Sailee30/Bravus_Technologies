@@ -103,10 +103,10 @@ export default function CustomSoftwarePage() {
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
                 <Code className="w-8 h-8 text-white" />
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-balance">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance">
                 Custom Software <span className="text-orange-500">Development</span>
               </h1>
-              <p className="text-xl text-white/70 mb-8 text-pretty">
+              <p className="text-base sm:text-lg md:text-xl text-white/70 mb-8 text-pretty">
                 Transform your business with tailored software solutions designed specifically for your unique
                 requirements and operational workflows.
               </p>
@@ -158,20 +158,20 @@ export default function CustomSoftwarePage() {
       <section className="px-4 sm:px-6 lg:px-12 py-16 bg-white/5">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Our Development Process</h2>
-            <p className="text-lg text-white/70">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">Our Development Process</h2>
+            <p className="text-base sm:text-lg text-white/70">
               A proven methodology that ensures quality delivery and client satisfaction
             </p>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {processSteps.map((step, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">
                   {step.step}
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
-                <p className="text-white/70 text-sm leading-relaxed">{step.description}</p>
+                <h3 className="text-lg sm:text-xl font-semibold mb-3">{step.title}</h3>
+                <p className="text-xs sm:text-sm text-white/70 leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>
@@ -183,19 +183,19 @@ export default function CustomSoftwarePage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">Technology Stack</h2>
-            <p className="text-lg text-white/70">
+            <p className="text-base sm:text-lg text-white/70">
               We use cutting-edge technologies to build robust, scalable solutions
             </p>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {techStack.map((tech, index) => (
               <div
                 key={index}
                 className="bg-white/5 border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-colors"
               >
                 <div className="text-sm text-orange-500 font-medium mb-2">{tech.category}</div>
-                <div className="font-semibold text-lg">{tech.name}</div>
+                <div className="font-semibold text-base sm:text-lg">{tech.name}</div>
               </div>
             ))}
           </div>
@@ -207,7 +207,7 @@ export default function CustomSoftwarePage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">Key Benefits</h2>
-            <p className="text-lg text-white/70">How custom software development transforms your business</p>
+            <p className="text-base sm:text-lg text-white/70">How custom software development transforms your business</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -219,8 +219,8 @@ export default function CustomSoftwarePage() {
                     <IconComponent className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-                    <p className="text-white/70 leading-relaxed">{benefit.description}</p>
+                    <h3 className="text-lg sm:text-xl font-semibold mb-2">{benefit.title}</h3>
+                    <p className="text-base sm:text-lg text-white/70 mb-8 max-w-2xl mx-auto">{benefit.description}</p>
                   </div>
                 </div>
               )
@@ -233,7 +233,7 @@ export default function CustomSoftwarePage() {
       <section className="px-4 sm:px-6 lg:px-12 py-16">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">Ready to Build Your Custom Solution?</h2>
-          <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-white/70 mb-8 max-w-2xl mx-auto">
             Let's discuss your requirements and create a software solution that perfectly fits your business needs.
           </p>
 

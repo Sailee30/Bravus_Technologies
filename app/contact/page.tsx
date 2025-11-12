@@ -20,6 +20,8 @@ import { useState } from "react"
 
 export default function ContactPage() {
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null)
+  const [selectedService, setSelectedService] = useState("")
+  const [selectedMarketing, setSelectedMarketing] = useState("")
 
   const faqs = [
    {
@@ -60,6 +62,31 @@ export default function ContactPage() {
 
   ]
 
+const services = [
+  "Custom Software Development",
+  "AI/ML Solutions",
+  "Mobile & Web Development",
+  "Cloud Migration & Operations",
+  "DevOps & CI/CD Automation",
+  "Data Engineering & Analytics",
+  "API Design & Integrations",
+  "QA & Test Automation",
+  "SaaS Product Development",
+  "UI/UX Design",
+]
+
+const marketingServices = [
+  "Growth Marketing",
+  "SEO & Technical SEO",
+  "SEM & Paid Advertising",
+  "Social Media Marketing",
+  "Email Marketing & Automation",
+  "Content Marketing",
+  "Conversion Rate Optimization (CRO)",
+  "Analytics & Reporting",
+  "Marketing Automation",
+]
+
   const socialLinks = [
     {
       name: "WhatsApp",
@@ -98,10 +125,10 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="px-4 sm:px-6 lg:px-12 py-16 lg:py-24">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 text-balance">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 text-balance">
             Get In <span className="text-orange-500">Touch</span>
           </h1>
-          <p className="text-xl text-white/70 max-w-3xl mx-auto mb-12 text-pretty">
+          <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-3xl mx-auto mb-12 text-pretty">
             Ready to transform your business with cutting-edge technology? Let's discuss your project and create
             something amazing together.
           </p>
@@ -121,15 +148,15 @@ export default function ContactPage() {
             {/* Contact Information */}
             <div className="space-y-8">
               <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+                <h3 className="text-xl sm:text-2xl font-bold mb-6">Contact Information</h3>
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Mail className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-1">Email</h4>
-                      <p className="text-white/70">hemant@bravustechnologies.com</p>
+                      <h4 className="text-sm sm:text-base font-semibold mb-1">Email</h4>
+                      <p className="text-xs sm:text-sm text-white/70">hemant@bravustechnologies.com</p>
                     </div>
                   </div>
 
@@ -138,8 +165,8 @@ export default function ContactPage() {
                       <Phone className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-1">Phone</h4>
-                      <p className="text-white/70">+91-7385663619</p>
+                      <h4 className="text-sm sm:text-base font-semibold mb-1">Phone</h4>
+                      <p className="text-xs sm:text-sm text-white/70">+91-7385663619</p>
                     </div>
                   </div>
 
@@ -148,8 +175,8 @@ export default function ContactPage() {
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-1">Location</h4>
-                      <p className="text-white/70">India (Remote Services Worldwide)</p>
+                      <h4 className="text-sm sm:text-base font-semibold mb-1">Location</h4>
+                      <p className="text-xs sm:text-sm text-white/70">India (Remote Services Worldwide)</p>
                     </div>
                   </div>
                 </div>
@@ -159,7 +186,7 @@ export default function ContactPage() {
               <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
                 <div className="flex items-center space-x-3 mb-4">
                   <Calendar className="w-8 h-8 text-orange-500" />
-                  <h3 className="text-2xl font-bold">Schedule a Meeting</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold">Schedule a Meeting</h3>
                 </div>
                 <p className="text-white/70 mb-6">
                   Prefer a direct conversation? Schedule a free consultation call to discuss your project in detail.
@@ -203,8 +230,8 @@ export default function ContactPage() {
       <section className="px-4 sm:px-6 lg:px-12 py-16 bg-white/5">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
-            <p className="text-lg text-white/70">Get answers to common questions about our services</p>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+            <p className="text-base sm:text-lg text-white/70">Get answers to common questions about our services</p>
           </div>
 
           <div className="space-y-4">
@@ -214,7 +241,7 @@ export default function ContactPage() {
                   onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
                   className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/10 transition-colors"
                 >
-                  <h3 className="font-semibold text-lg">{faq.question}</h3>
+                  <h3 className="font-semibold text-base sm:text-lg">{faq.question}</h3>
                   {expandedFAQ === index ? (
                     <ChevronUp className="w-5 h-5 text-orange-500" />
                   ) : (

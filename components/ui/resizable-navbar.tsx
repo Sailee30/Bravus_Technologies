@@ -40,7 +40,7 @@ interface MobileNavMenuProps {
   onClose: () => void
 }
 
-export const ResizableNavbar = ({ children, className }: NavbarProps) => {
+export const ResizableNavbar = ({ children, className, onVisibleChange }: NavbarProps & { onVisibleChange?: (visible: boolean) => void }) => {
   const ref = useRef<HTMLDivElement>(null)
   const { scrollY } = useScroll({
     target: ref,
@@ -61,23 +61,20 @@ export const ResizableNavbar = ({ children, className }: NavbarProps) => {
           setVisible(false)
         }
       }
+      onVisibleChange?.(visible)
     }
   })
 
   return (
-    <motion.div
+    <div
       ref={ref}
       className={cn(
         "fixed inset-x-0 top-0 z-[5000] mx-auto flex h-16 max-w-7xl items-center justify-between border border-transparent px-4 py-2 lg:px-8",
         className,
       )}
     >
-      {React.Children.map(children, (child) =>
-        React.isValidElement(child)
-          ? React.cloneElement(child as React.ReactElement<{ visible?: boolean }>, { visible })
-          : child,
-      )}
-    </motion.div>
+      {children}
+    </div>
   )
 }
 
@@ -95,8 +92,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         ease: "easeInOut",
       }}
       className={cn(
-        "flex h-full w-full items-center justify-between bg-transparent px-4 py-2 lg:flex dark:bg-transparent",
-        visible && "bg-white/80 dark:bg-neutral-950/80",
+        "flex h-full w-full items-center justify-between px-4 py-2 lg:flex dark:bg-transparent",
         className,
       )}
     >
@@ -161,7 +157,6 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
       }}
       className={cn(
         "flex h-full w-full items-center justify-between bg-transparent px-0 py-2 lg:hidden",
-        visible && "bg-white/80 dark:bg-neutral-950/80",
         className,
       )}
     >
@@ -198,14 +193,16 @@ export const MobileNavMenu = ({ children, className, isOpen, onClose }: MobileNa
 export const MobileNavToggle = ({
   isOpen,
   onClick,
+  visible,
 }: {
   isOpen: boolean
   onClick: () => void
+  visible?: boolean
 }) => {
   return isOpen ? (
-    <IconX className="text-black dark:text-white" onClick={onClick} />
+    <IconX className={`${visible ? "text-white" : "text-black dark:text-white"}`} onClick={onClick} />
   ) : (
-    <IconMenu2 className="text-black dark:text-white" onClick={onClick} />
+    <IconMenu2 className={`${visible ? "text-white" : "text-black dark:text-white"}`} onClick={onClick} />
   )
 }
 

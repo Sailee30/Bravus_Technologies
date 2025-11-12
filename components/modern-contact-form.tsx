@@ -26,6 +26,7 @@ const ModernContactForm = ({
     phone: "",
     company: "",
     service: "",
+    marketing: "", 
     message: "",
   })
 
@@ -42,8 +43,8 @@ const ModernContactForm = ({
   return (
     <div className={cn("bg-white/5 border border-white/10 rounded-2xl p-8", className)}>
       <div className="mb-6">
-        <h2 className="text-3xl font-bold mb-2">{title}</h2>
-        {subtitle && <p className="text-white/70 text-sm">{subtitle}</p>}
+        <h2 className="text-2xl sm:text-3xl font-bold mb-2">{title}</h2>
+        {subtitle && <p className="text-white/70 text-xs sm:text-sm">{subtitle}</p>}
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
@@ -107,24 +108,51 @@ const ModernContactForm = ({
           </div>
         </div>
 
-        <div className="space-y-2">
-          <Label htmlFor="service" className="text-sm font-medium text-white">
-            Service Interested In
-          </Label>
-          <Select value={formData.service} onValueChange={(value) => handleInputChange("service", value)}>
-            <SelectTrigger className="bg-white/10 border-white/20 text-white">
-              <SelectValue placeholder="Select a service" />
-            </SelectTrigger>
-            <SelectContent className="bg-gray-900 border-white/20">
-              <SelectItem value="custom-software">Custom Software Development</SelectItem>
-              <SelectItem value="ai-ml">AI/ML Model Development</SelectItem>
-              <SelectItem value="saas">SaaS Product Development</SelectItem>
-              <SelectItem value="ui-ux">UI/UX Design</SelectItem>
-              <SelectItem value="mobile-web">Mobile & Web Development</SelectItem>
-              <SelectItem value="social-marketing">Social Media & Marketing</SelectItem>
-              <SelectItem value="consultation">General Consultation</SelectItem>
-            </SelectContent>
-          </Select>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div className="space-y-2">
+            <Label htmlFor="service" className="text-sm font-medium text-white">
+              Service Interested In *
+            </Label>
+            <Select value={formData.service} onValueChange={(value) => handleInputChange("service", value)}>
+              <SelectTrigger className="bg-white/10 border-white/20 text-white">
+                <SelectValue placeholder="Select a service" />
+              </SelectTrigger>
+              <SelectContent className="bg-gray-900 border-white/20">
+                <SelectItem value="custom-software">Custom Software Development</SelectItem>
+                <SelectItem value="ai-ml">AI/ML Solutions</SelectItem>
+                <SelectItem value="mobile-web">Mobile & Web Development</SelectItem>
+                <SelectItem value="cloud-migration">Cloud Migration & Operations</SelectItem>
+                <SelectItem value="devops">DevOps & CI/CD Automation</SelectItem>
+                <SelectItem value="data-engineering">Data Engineering & Analytics</SelectItem>
+                <SelectItem value="api-design">API Design & Integrations</SelectItem>
+                <SelectItem value="qa-testing">QA & Test Automation</SelectItem>
+                <SelectItem value="saas">SaaS Product Development</SelectItem>
+                <SelectItem value="ui-ux">UI/UX Design</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="marketing" className="text-sm font-medium text-white">
+              Marketing Service *
+            </Label>
+            <Select value={formData.marketing} onValueChange={(value) => handleInputChange("marketing", value)}>
+              <SelectTrigger className="bg-white/10 border-white/20 text-white">
+                <SelectValue placeholder="Select marketing service" />
+              </SelectTrigger>
+              <SelectContent className="bg-gray-900 border-white/20">
+                <SelectItem value="growth-marketing">Growth Marketing</SelectItem>
+                <SelectItem value="seo">SEO & Technical SEO</SelectItem>
+                <SelectItem value="sem">SEM & Paid Advertising</SelectItem>
+                <SelectItem value="social-media">Social Media Marketing</SelectItem>
+                <SelectItem value="email-marketing">Email Marketing & Automation</SelectItem>
+                <SelectItem value="content-marketing">Content Marketing</SelectItem>
+                <SelectItem value="cro">Conversion Rate Optimization (CRO)</SelectItem>
+                <SelectItem value="analytics">Analytics & Reporting</SelectItem>
+                <SelectItem value="marketing-automation">Marketing Automation</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
         </div>
 
         <div className="space-y-2">

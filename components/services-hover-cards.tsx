@@ -126,6 +126,7 @@ export function ServicesHoverCards({
           title: service.title,
           description: service.description,
           link: service.link,
+          icon: service.icon,
         }))}
         className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
       />

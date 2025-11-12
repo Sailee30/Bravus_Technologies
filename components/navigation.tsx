@@ -16,6 +16,7 @@ export function Navigation() {
     { href: "/", label: "Home" },
     { href: "/services", label: "Services" },
     { href: "/about", label: "About" },
+    { href: "/blogs", label: "Blogs" },
     { href: "/contact", label: "Contact" },
   ]
 
@@ -27,7 +28,7 @@ export function Navigation() {
   }
 
   return (
-    <header className="relative z-50 flex items-center justify-between px-4 sm:px-6 py-4 lg:px-12 border-b border-white/10 bg-black/80 backdrop-blur-sm sticky top-0">
+    <header className="relative z-50 flex items-center justify-between px-4 sm:px-6 py-4 lg:px-12">
       <div className="flex items-center space-x-2 pl-3 sm:pl-6 lg:pl-12">
         <Link href="/" className="flex items-center space-x-3">
           <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center overflow-hidden">

@@ -127,10 +127,10 @@ export default function MobileWebPage() {
               <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6">
                 <Smartphone className="w-8 h-8 text-white" />
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-balance">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance">
                 Mobile & Web <span className="text-orange-500">Development</span>
               </h1>
-              <p className="text-xl text-white/70 mb-8 text-pretty">
+              <p className="text-base sm:text-lg md:text-xl text-white/70 mb-8 text-pretty">
                 Responsive web applications and native mobile apps that deliver exceptional performance across all
                 devices and platforms.
               </p>
@@ -177,10 +177,10 @@ export default function MobileWebPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">Development Services</h2>
-            <p className="text-lg text-white/70">Comprehensive mobile and web development solutions</p>
+            <p className="text-base sm:text-lg text-white/70">Comprehensive mobile and web development solutions</p>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {services.map((service, index) => {
               const IconComponent = service.icon
               return (
@@ -191,8 +191,8 @@ export default function MobileWebPage() {
                   <div className="w-12 h-12 bg-indigo-500 rounded-lg flex items-center justify-center mb-4">
                     <IconComponent className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                  <p className="text-white/70 leading-relaxed">{service.description}</p>
+                  <h3 className="text-lg sm:text-xl font-semibold mb-3">{service.title}</h3>
+                  <p className="text-xs sm:text-sm text-white/70 leading-relaxed">{service.description}</p>
                 </div>
               )
             })}
@@ -205,17 +205,17 @@ export default function MobileWebPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">Development Process</h2>
-            <p className="text-lg text-white/70">From concept to deployment across all platforms</p>
+            <p className="text-base sm:text-lg text-white/70">From concept to deployment across all platforms</p>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {processSteps.map((step, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">
                   {step.step}
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
-                <p className="text-white/70 text-sm leading-relaxed">{step.description}</p>
+                <h3 className="text-lg sm:text-xl font-semibold mb-3">{step.title}</h3>
+                <p className="text-xs sm:text-sm text-white/70 leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>
@@ -227,17 +227,17 @@ export default function MobileWebPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">Technology Stack</h2>
-            <p className="text-lg text-white/70">Modern frameworks and tools for mobile and web development</p>
+            <p className="text-base sm:text-lg text-white/70">Modern frameworks and tools for mobile and web development</p>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {techStack.map((tech, index) => (
               <div
                 key={index}
                 className="bg-white/5 border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-colors"
               >
                 <div className="text-sm text-orange-500 font-medium mb-2">{tech.category}</div>
-                <div className="font-semibold text-lg">{tech.name}</div>
+                <div className="font-semibold text-base sm:text-lg">{tech.name}</div>
               </div>
             ))}
           </div>
@@ -249,7 +249,7 @@ export default function MobileWebPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">Key Benefits</h2>
-            <p className="text-lg text-white/70">Why choose our mobile and web development services</p>
+            <p className="text-base sm:text-lg text-white/70">Why choose our mobile and web development services</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -258,11 +258,11 @@ export default function MobileWebPage() {
               return (
                 <div key={index} className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <IconComponent className="w-6 h-6 text-white" />
+                    <IconComponent className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-                    <p className="text-white/70 leading-relaxed">{benefit.description}</p>
+                    <h3 className="text-lg sm:text-xl font-semibold mb-2">{benefit.title}</h3>
+                    <p className="text-xs sm:text-sm text-white/70 leading-relaxed">{benefit.description}</p>
                   </div>
                 </div>
               )

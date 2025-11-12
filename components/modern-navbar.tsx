@@ -14,6 +14,7 @@ import {
 
 const ModernNavbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [visible, setVisible] = useState(false)
 
   const navItems = [
     {
@@ -29,14 +30,21 @@ const ModernNavbar = () => {
       link: "/services",
     },
     {
+    name: "Blogs",
+    link: "/blogs",
+   },
+    {
       name: "Contact",
       link: "/contact",
     },
   ]
 
   return (
-    <ResizableNavbar className="px-4 py-2">
-      <NavBody className="justify-between">
+    <ResizableNavbar 
+      className="px-4 py-2 bg-transparent border-0"
+      onVisibleChange={setVisible}
+    >
+      <NavBody className="justify-between" visible={visible}>
         <NavbarLogo />
         <NavItems items={navItems} />
         <NavbarButton href="/contact" className="hidden lg:block" variant="primary">
@@ -44,10 +52,10 @@ const ModernNavbar = () => {
         </NavbarButton>
       </NavBody>
 
-      <MobileNav>
+      <MobileNav visible={visible}>
         <MobileNavHeader className="flex justify-between items-center w-full">
-        <div></div>
-        <MobileNavToggle isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
+          <div></div>
+          <MobileNavToggle isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} visible={visible} />
         </MobileNavHeader>
         <MobileNavMenu isOpen={isOpen} onClose={() => setIsOpen(false)} className="px-4">
           <div className="flex flex-col space-y-4 w-full">
