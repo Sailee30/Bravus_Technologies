@@ -1,137 +1,15 @@
+// app/blog/page.tsx
 'use client';
 
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { Search, ChevronRight, Calendar, Clock } from 'lucide-react';
+import { articles, Article } from '@/app/data/articles';
 
 export default function BlogPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('newest');
-
-  const allArticles = [
-    {
-      id: 'eight-second-rule',
-      title: 'The 8-Second Rule: Winning Marketing Strategies for Short Attention Spans',
-      excerpt: 'Capture attention in 8 seconds with compelling visuals, storytelling, and optimized content that converts.',
-      category: 'marketing',
-      categoryLabel: 'Marketing',
-      date: new Date('2024-11-15'),
-      readTime: 5,
-      featured: true,
-      author: 'Marketing Team',
-    },
-    {
-      id: 'ai-ethics-business',
-      title: 'AI Ethics Isn\'t Optional Anymore—It\'s a Business Advantage',
-      excerpt: 'How ethical AI practices build trust, enhance customer experience, and create competitive advantage.',
-      category: 'business',
-      categoryLabel: 'Business',
-      date: new Date('2024-11-14'),
-      readTime: 7,
-      featured: true,
-      author: 'Tech Strategist',
-    },
-    {
-      id: 'customer-loyalty-trust',
-      title: 'Customer Loyalty Isn\'t Built on Discounts, It\'s Built on Trust',
-      excerpt: 'Why trust matters more than discounts and how to build lasting customer relationships.',
-      category: 'business',
-      categoryLabel: 'Business',
-      date: new Date('2024-11-13'),
-      readTime: 6,
-      featured: true,
-      author: 'Business Expert',
-    },
-    {
-      id: 'networking-weak-ties',
-      title: 'The Hidden Power of Networking: How Weak Ties Open Big Doors',
-      excerpt: 'Discover how casual connections and acquaintances can lead to unexpected career opportunities.',
-      category: 'career',
-      categoryLabel: 'Career',
-      date: new Date('2024-11-12'),
-      readTime: 8,
-      featured: false,
-      author: 'Career Coach',
-    },
-    {
-      id: 'simplicity-sells',
-      title: 'Why Simplicity Sells: The Science Behind Less Being More',
-      excerpt: 'Understand consumer psychology and how minimalism in design increases trust and conversions.',
-      category: 'marketing',
-      categoryLabel: 'Marketing',
-      date: new Date('2024-11-11'),
-      readTime: 6,
-      featured: false,
-      author: 'Design Strategist',
-    },
-    {
-      id: 'influence-psychology',
-      title: 'Unlocking Influence Strategies: Psychological Tricks Every Business Should Use',
-      excerpt: 'Master reciprocity, social proof, authority, and emotional connections to influence buying decisions.',
-      category: 'marketing',
-      categoryLabel: 'Marketing',
-      date: new Date('2024-11-10'),
-      readTime: 7,
-      featured: false,
-      author: 'Psychology Expert',
-    },
-    {
-      id: 'seven-tech-errors',
-      title: '7 Key Tech Errors Every Startup Should Avoid',
-      excerpt: 'Learn from common mistakes: inadequate research, poor design, founder issues, and scaling problems.',
-      category: 'startup',
-      categoryLabel: 'Startup',
-      date: new Date('2024-11-09'),
-      readTime: 8,
-      featured: false,
-      author: 'Startup Founder',
-    },
-    {
-      id: 'predictive-analytics',
-      title: 'Unlocking the Power of Predictive Analytics: Transform Data into Smarter Decisions',
-      excerpt: 'Learn how to use data-driven insights to forecast trends and make informed business decisions.',
-      category: 'technology',
-      categoryLabel: 'Technology',
-      date: new Date('2024-11-08'),
-      readTime: 9,
-      featured: false,
-      author: 'Data Scientist',
-    },
-    {
-      id: 'devops-delivery',
-      title: 'The Role of DevOps in Faster, Smarter Product Delivery',
-      excerpt: 'Discover how DevOps breaks silos and accelerates development cycles with automation and CI/CD.',
-      category: 'technology',
-      categoryLabel: 'Technology',
-      date: new Date('2024-11-07'),
-      readTime: 10,
-      featured: false,
-      author: 'DevOps Engineer',
-    },
-    {
-      id: 'local-seo-strategies',
-      title: 'Local SEO Strategies to Boost Small Business Growth',
-      excerpt: 'Complete guide to Google Business Profile, local citations, and optimization for nearby searches.',
-      category: 'seo',
-      categoryLabel: 'SEO',
-      date: new Date('2024-11-06'),
-      readTime: 12,
-      featured: false,
-      author: 'SEO Specialist',
-    },
-    {
-      id: 'linkedin-vs-facebook',
-      title: 'LinkedIn Ads vs Facebook Ads: Which Works Better for B2B?',
-      excerpt: 'Compare platform strengths, audience targeting, and ROI for B2B marketing campaigns.',
-      category: 'advertising',
-      categoryLabel: 'Advertising',
-      date: new Date('2024-11-05'),
-      readTime: 8,
-      featured: false,
-      author: 'Ad Manager',
-    },
-  ];
 
   const categories = [
     { value: 'all', label: 'All Categories' },
@@ -144,34 +22,38 @@ export default function BlogPage() {
     { value: 'career', label: 'Career' },
   ];
 
-  const filteredArticles = useMemo(() => {
-    let result = allArticles;
+const filteredArticles = useMemo(() => {
+  let result: Article[] = articles;
 
-    if (selectedCategory !== 'all') {
-      result = result.filter(article => article.category === selectedCategory);
-    }
+  if (selectedCategory !== 'all') {
+    result = result.filter((article: Article) => article.category === selectedCategory);
+  }
 
-    if (searchQuery.trim()) {
-      const query = searchQuery.toLowerCase();
-      result = result.filter(article =>
-        article.title.toLowerCase().includes(query) ||
-        article.excerpt.toLowerCase().includes(query)
-      );
-    }
+  if (searchQuery.trim()) {
+    const query = searchQuery.toLowerCase();
+    result = result.filter((article: Article) =>
+      article.title.toLowerCase().includes(query) ||
+      article.excerpt.toLowerCase().includes(query)
+    );
+  }
 
-    if (sortBy === 'newest') {
-      result.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-    } else if (sortBy === 'oldest') {
-      result.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
-    }
+  if (sortBy === 'newest') {
+    result = [...result].sort((a: Article, b: Article) => 
+      new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
+  } else if (sortBy === 'oldest') {
+    result = [...result].sort((a: Article, b: Article) => 
+      new Date(a.date).getTime() - new Date(b.date).getTime()
+    );
+  }
 
-    return result;
-  }, [searchQuery, selectedCategory, sortBy]);
+  return result;
+}, [searchQuery, selectedCategory, sortBy]);
 
-  const featuredArticles = allArticles.filter(a => a.featured);
+  const featuredArticles = articles.filter((a: Article) => a.featured);
 
-  const formatDate = (date: Date) => {
-    return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
   };
 
   return (
@@ -200,7 +82,7 @@ export default function BlogPage() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {featuredArticles.map(article => (
+              {featuredArticles.map((article: Article) => (
                 <Link key={article.id} href={`/blog/${article.id}`}>
                   <div className="group h-full bg-white/5 backdrop-blur border border-white/10 rounded-lg p-8 hover:border-orange-500/50 hover:bg-white/10 transition-all duration-300 cursor-pointer">
                     <div className="mb-6">
@@ -291,7 +173,7 @@ export default function BlogPage() {
 
           {filteredArticles.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {filteredArticles.map(article => (
+              {filteredArticles.map((article: Article) => (
                 <Link key={article.id} href={`/blog/${article.id}`}>
                   <div className="group h-full bg-white/5 backdrop-blur border border-white/10 rounded-lg p-8 hover:border-orange-500/50 hover:bg-white/10 transition-all duration-300 cursor-pointer">
                     <div className="flex items-start justify-between mb-6">
