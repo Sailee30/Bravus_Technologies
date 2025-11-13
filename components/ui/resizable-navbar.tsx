@@ -181,7 +181,7 @@ export const MobileNavMenu = ({ children, className, isOpen, onClose }: MobileNa
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
           className={cn(
-            "fixed inset-0 top-16 z-[5000] flex h-screen w-screen flex-col items-start justify-start space-y-10 bg-white pt-10 text-xl text-zinc-600 transition duration-200 hover:text-zinc-800 dark:bg-neutral-900",
+            "fixed inset-0 top-16 z-[4999] h-screen w-screen overflow-y-auto flex-col items-start justify-start bg-black pt-10",
             className,
           )}
         >
@@ -202,9 +202,9 @@ export const MobileNavToggle = ({
   visible?: boolean
 }) => {
   return isOpen ? (
-    <IconX className={`${visible ? "text-white" : "text-black dark:text-white"}`} onClick={onClick} />
+    <IconX className={`${visible ? "text-white" : "text-black dark:text-white"} cursor-pointer hover:opacity-70 transition-opacity`} onClick={onClick} />
   ) : (
-    <IconMenu2 className={`${visible ? "text-white" : "text-black dark:text-white"}`} onClick={onClick} />
+    <IconMenu2 className={`${visible ? "text-white" : "text-black dark:text-white"} cursor-pointer hover:opacity-70 transition-opacity`} onClick={onClick} />
   )
 }
 
@@ -246,7 +246,7 @@ export const NavbarButton = ({
       className={cn(
         "relative z-20 rounded-full px-4 py-2 text-sm font-medium transition-colors",
         variant === "primary"
-          ? "bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+          ? "bg-orange-500 text-white hover:bg-orange-600 dark:bg-orange-500 dark:text-white dark:hover:bg-orange-600"
           : "border border-neutral-200 bg-white text-black hover:bg-gray-50 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white dark:hover:bg-neutral-800",
         className,
       )}
