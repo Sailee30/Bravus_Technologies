@@ -6,7 +6,7 @@ import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { ShimmerButton } from "@/components/shimmer-button"
-import logoImage from "@/assets/images/logo.png"
+import logo from "../assets/images/logo.png";
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -31,16 +31,14 @@ export function Navigation() {
     <header className="relative z-50 flex items-center justify-between px-4 sm:px-6 py-4 lg:px-12">
       <div className="flex items-center space-x-2 pl-3 sm:pl-6 lg:pl-12">
         <Link href="/" className="flex items-center space-x-3">
-          <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center overflow-hidden">
-            <Image 
-              src={logoImage} 
-              alt="Bravus Logo" 
-              width={48}
-              height={48}
-              className="object-contain w-full h-full"
-            />
-          </div>
-          <span className="text-white font-bold text-lg sm:text-xl lg:text-2xl">Bravus</span>
+              <Image
+                src={logo}
+                alt="Bravus Logo"
+                className="object-contain"
+                width={120}
+                height={50}
+                priority
+              />
         </Link>
       </div>
 

@@ -1,4 +1,6 @@
 "use client"
+import Image from "next/image"
+import logo from "@/assets/images/logo.png"
 import { cn } from "@/lib/utils"
 import { IconMenu2, IconX } from "@tabler/icons-react"
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "motion/react"
@@ -208,11 +210,18 @@ export const MobileNavToggle = ({
 
 export const NavbarLogo = () => {
   return (
-    <a href="#" className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal">
-      <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
-        <span className="text-white font-bold text-lg">B</span>
+    <a href="/" className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1">
+      <div className="w-[100px] h-[40px] lg:w-[150px] lg:h-[60px] flex items-center">
+        <Image
+          src={logo}
+          alt="Bravus Logo"
+          className="object-contain"
+          width={150}
+          height={60}
+          priority
+          unoptimized
+        />
       </div>
-      <span className="font-medium text-white">Bravus</span>
     </a>
   )
 }
