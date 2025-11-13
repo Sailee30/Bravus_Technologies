@@ -191,10 +191,17 @@ const marketingServices = [
                 <p className="text-white/70 mb-6">
                   Prefer a direct conversation? Schedule a free consultation call to discuss your project in detail.
                 </p>
-                <Button className="w-full group relative bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 border border-white/20 transition-all duration-300">
-                  Schedule Call
-                  <Calendar className="w-5 h-5" />
-                </Button>
+                <a 
+                  href="https://calendly.com/saileechavan04"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <Button className="w-full group relative bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 border border-white/20 transition-all duration-300">
+                    Schedule Call
+                    <Calendar className="w-5 h-5" />
+                  </Button>
+                </a>
               </div>
 
               {/* Social Links */}
