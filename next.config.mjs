@@ -9,10 +9,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-   output: "export", // 👈 replaces next export
-  images: {
-    unoptimized: true, // needed for static hosting like Hostinger
-  },
 }
 
 export default nextConfig

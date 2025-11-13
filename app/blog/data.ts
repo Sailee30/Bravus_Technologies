@@ -1,21 +1,27 @@
-// data/articles.ts
+// =====================================================
+// FILE: app/blog/data.ts
+// =====================================================
+
 export interface Article {
-  id: string;
-  title: string;
-  author: string;
-  date: string;
-  readTime: number;
-  category: string;
-  categoryLabel: string;
-  excerpt: string;
-  content: string;
-  relatedArticles: string[];
-  featured?: boolean;
+  id: string
+  slug: string
+  title: string
+  author: string
+  date: string
+  readTime: number
+  category: string
+  categoryLabel?: string
+  excerpt: string
+  content: string
+  tags?: string[]
+  relatedArticles: string[]
+  featured?: boolean
 }
 
 export const articles: Article[] = [
   {
     id: 'eight-second-rule',
+    slug: 'eight-second-rule',
     title: 'The 8-Second Rule: Winning Marketing Strategies for Short Attention Spans',
     author: 'Marketing Team',
     date: '2024-11-15',
@@ -86,6 +92,7 @@ export const articles: Article[] = [
   },
   {
     id: 'ai-ethics-business',
+    slug: 'ai-ethics-business',
     title: 'AI Ethics Isn\'t Optional Anymore—It\'s a Business Advantage',
     author: 'Tech Strategist',
     date: '2024-11-14',
@@ -127,6 +134,7 @@ export const articles: Article[] = [
   },
   {
     id: 'customer-loyalty-trust',
+    slug: 'customer-loyalty-trust',
     title: 'Customer Loyalty Isn\'t Built on Discounts, It\'s Built on Trust',
     author: 'Business Expert',
     date: '2024-11-13',
@@ -172,6 +180,7 @@ export const articles: Article[] = [
   },
   {
     id: 'networking-weak-ties',
+    slug: 'networking-weak-ties',
     title: 'The Hidden Power of Networking: How Weak Ties Open Big Doors',
     author: 'Career Coach',
     date: '2024-11-12',
@@ -226,6 +235,7 @@ export const articles: Article[] = [
   },
   {
     id: 'simplicity-sells',
+    slug: 'simplicity-sells',
     title: 'Why Simplicity Sells: The Science Behind Less Being More',
     author: 'Design Strategist',
     date: '2024-11-11',
@@ -268,6 +278,7 @@ export const articles: Article[] = [
   },
   {
     id: 'influence-psychology',
+    slug: 'influence-psychology',
     title: 'Unlocking Influence Strategies: Psychological Tricks Every Business Should Use',
     author: 'Psychology Expert',
     date: '2024-11-10',
@@ -318,6 +329,7 @@ export const articles: Article[] = [
   },
   {
     id: 'seven-tech-errors',
+    slug: 'seven-tech-errors',
     title: '7 Key Tech Errors Every Startup Should Avoid',
     author: 'Startup Founder',
     date: '2024-11-09',
@@ -370,6 +382,7 @@ export const articles: Article[] = [
   },
   {
     id: 'predictive-analytics',
+    slug: 'predictive-analytics',
     title: 'Unlocking the Power of Predictive Analytics: Transform Data into Smarter Decisions',
     author: 'Data Scientist',
     date: '2024-11-08',
@@ -405,6 +418,7 @@ export const articles: Article[] = [
   },
   {
     id: 'devops-delivery',
+    slug: 'devops-delivery',
     title: 'The Role of DevOps in Faster, Smarter Product Delivery',
     author: 'DevOps Engineer',
     date: '2024-11-07',
@@ -447,6 +461,7 @@ export const articles: Article[] = [
   },
   {
     id: 'local-seo-strategies',
+    slug: 'local-seo-strategies',
     title: 'Local SEO Strategies to Boost Small Business Growth',
     author: 'SEO Specialist',
     date: '2024-11-06',
@@ -500,6 +515,7 @@ export const articles: Article[] = [
   },
   {
     id: 'linkedin-vs-facebook',
+    slug: 'linkedin-vs-facebook',
     title: 'LinkedIn Ads vs Facebook Ads: Which Works Better for B2B?',
     author: 'Ad Manager',
     date: '2024-11-05',
@@ -543,3 +559,12 @@ export const articles: Article[] = [
     featured: false,
   },
 ];
+
+export function getRelatedArticles(currentId: string, limit = 3) {
+  const article = articles.find(a => a.id === currentId)
+  if (!article) return []
+  
+  return articles.filter(a => 
+    article.relatedArticles.includes(a.id)
+  ).slice(0, limit)
+}
