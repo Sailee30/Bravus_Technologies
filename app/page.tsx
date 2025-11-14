@@ -1052,7 +1052,7 @@ const [testimonialsPerSlide, setTestimonialsPerSlide] = useState(3)
     {/* Stats Section */}
     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-60">
       <div className="text-center">
-        <div className="text-3xl font-bold text-white mb-2">40+</div>
+        <div className="text-3xl font-bold text-white mb-2">65+</div>
         <div className="text-white/70 text-sm">Projects Delivered</div>
       </div>
 

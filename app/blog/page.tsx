@@ -78,7 +78,7 @@ export default function BlogPage() {
       <section className="pt-20 pb-12 px-4 md:pt-28 md:pb-16 lg:pt-32 lg:pb-20 border-b border-white/10">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 lg:mb-8 leading-tight">
-            <span className="text-white">Explore Our </span><span className="text-orange-500">Blogs</span>
+            <span className="text-white"> Explore Our </span><span className="text-orange-500">Blogs</span>
           </h1>
           <p className="text-base md:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Discover insights and strategies from industry experts designed to transform your business and drive growth.
