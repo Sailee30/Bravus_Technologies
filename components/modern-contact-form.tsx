@@ -114,9 +114,9 @@ const ModernContactForm = ({
     Service Interested In *
   </Label>
   <Select value={formData.service} onValueChange={(value) => handleInputChange("service", value)}>
-  <SelectTrigger className="bg-white/10 border-white/20 text-white h-10 sm:h-12 text-sm sm:text-base hover:bg-white/20 focus:ring-2 focus:ring-orange-500 [&>span]:text-white [&>span]:font-medium">
-    <SelectValue placeholder="Select a service" className="text-white" />
-  </SelectTrigger>
+  <SelectTrigger className="bg-white/10 border-white/20 text-white h-10 sm:h-12 text-sm sm:text-base hover:bg-white/20 focus:ring-2 focus:ring-orange-500">
+  <SelectValue placeholder="Select a service" />
+</SelectTrigger>
   <SelectContent className="bg-gray-900 border border-white/30 z-[9999] w-screen sm:w-auto min-w-[250px] max-h-80 overflow-y-auto rounded-md shadow-lg">
     <SelectItem value="custom-software" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3 data-[state=checked]:bg-orange-500 data-[state=checked]:text-white">Custom Software Development</SelectItem>
     <SelectItem value="ai-ml" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3 data-[state=checked]:bg-orange-500 data-[state=checked]:text-white3">AI/ML Solutions</SelectItem>
@@ -137,9 +137,9 @@ const ModernContactForm = ({
             Marketing Service *
           </Label>
           <Select value={formData.marketing} onValueChange={(value) => handleInputChange("marketing", value)}>
-  <SelectTrigger className="bg-white/10 border-white/20 text-white h-10 sm:h-12 text-sm sm:text-base hover:bg-white/20 focus:ring-2 focus:ring-orange-500 [&>span]:text-white [&>span]:font-medium">
-    <SelectValue placeholder="Select marketing service" className="text-white" />
-  </SelectTrigger>
+  <SelectTrigger className="bg-white/10 border-white/20 text-white h-10 sm:h-12 text-sm sm:text-base hover:bg-white/20 focus:ring-2 focus:ring-orange-500">
+  <SelectValue placeholder="Select marketing service" />
+</SelectTrigger>
   <SelectContent className="bg-gray-900 border border-white/30 z-[9999] w-screen sm:w-auto min-w-[250px] max-h-80 overflow-y-auto rounded-md shadow-lg">
     <SelectItem value="growth-marketing" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3 data-[state=checked]:bg-orange-500 data-[state=checked]:text-white">Growth Marketing</SelectItem>
     <SelectItem value="seo" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3 data-[state=checked]:bg-orange-500 data-[state=checked]:text-white">SEO & Technical SEO</SelectItem>
