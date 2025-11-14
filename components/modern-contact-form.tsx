@@ -114,22 +114,22 @@ const ModernContactForm = ({
     Service Interested In *
   </Label>
   <Select value={formData.service} onValueChange={(value) => handleInputChange("service", value)}>
-    <SelectTrigger className="bg-white/10 border-white/20 text-white h-10 sm:h-12 text-sm sm:text-base">
-      <SelectValue placeholder="Select a service" />
-    </SelectTrigger>
-    <SelectContent className="bg-gray-900 border-white/20 z-50 w-full sm:w-auto max-h-60 sm:max-h-96 overflow-y-auto">
-      <SelectItem value="custom-software">Custom Software Development</SelectItem>
-      <SelectItem value="ai-ml">AI/ML Solutions</SelectItem>
-      <SelectItem value="mobile-web">Mobile & Web Development</SelectItem>
-      <SelectItem value="cloud-migration">Cloud Migration & Operations</SelectItem>
-      <SelectItem value="devops">DevOps & CI/CD Automation</SelectItem>
-      <SelectItem value="data-engineering">Data Engineering & Analytics</SelectItem>
-      <SelectItem value="api-design">API Design & Integrations</SelectItem>
-      <SelectItem value="qa-testing">QA & Test Automation</SelectItem>
-      <SelectItem value="saas">SaaS Product Development</SelectItem>
-      <SelectItem value="ui-ux">UI/UX Design</SelectItem>
-    </SelectContent>
-  </Select>
+  <SelectTrigger className="bg-white/10 border-white/20 text-white h-10 sm:h-12 text-sm sm:text-base hover:bg-white/20 focus:ring-2 focus:ring-orange-500">
+    <SelectValue placeholder="Select a service" />
+  </SelectTrigger>
+  <SelectContent className="bg-gray-900 border border-white/30 z-[9999] w-screen sm:w-auto min-w-[250px] max-h-80 overflow-y-auto rounded-md shadow-lg">
+    <SelectItem value="custom-software" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">Custom Software Development</SelectItem>
+    <SelectItem value="ai-ml" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">AI/ML Solutions</SelectItem>
+    <SelectItem value="mobile-web" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">Mobile & Web Development</SelectItem>
+    <SelectItem value="cloud-migration" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">Cloud Migration & Operations</SelectItem>
+    <SelectItem value="devops" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">DevOps & CI/CD Automation</SelectItem>
+    <SelectItem value="data-engineering" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">Data Engineering & Analytics</SelectItem>
+    <SelectItem value="api-design" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">API Design & Integrations</SelectItem>
+    <SelectItem value="qa-testing" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">QA & Test Automation</SelectItem>
+    <SelectItem value="saas" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">SaaS Product Development</SelectItem>
+    <SelectItem value="ui-ux" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">UI/UX Design</SelectItem>
+  </SelectContent>
+</Select>
 </div>
 
         <div className="space-y-2">
@@ -137,21 +137,21 @@ const ModernContactForm = ({
             Marketing Service *
           </Label>
           <Select value={formData.marketing} onValueChange={(value) => handleInputChange("marketing", value)}>
-            <SelectTrigger className="bg-white/10 border-white/20 text-white h-10 sm:h-12 text-sm sm:text-base">
-              <SelectValue placeholder="Select marketing service" />
-            </SelectTrigger>
-            <SelectContent className="bg-gray-900 border-white/20 z-40 w-full sm:w-auto max-h-60 sm:max-h-96 overflow-y-auto">
-               <SelectItem value="growth-marketing">Growth Marketing</SelectItem>
-               <SelectItem value="seo">SEO & Technical SEO</SelectItem>
-               <SelectItem value="sem">SEM & Paid Advertising</SelectItem>
-               <SelectItem value="social-media">Social Media Marketing</SelectItem>
-               <SelectItem value="email-marketing">Email Marketing & Automation</SelectItem>
-               <SelectItem value="content-marketing">Content Marketing</SelectItem>
-               <SelectItem value="cro">Conversion Rate Optimization (CRO)</SelectItem>
-               <SelectItem value="analytics">Analytics & Reporting</SelectItem>
-               <SelectItem value="marketing-automation">Marketing Automation</SelectItem>
-             </SelectContent>
-           </Select>
+  <SelectTrigger className="bg-white/10 border-white/20 text-white h-10 sm:h-12 text-sm sm:text-base hover:bg-white/20 focus:ring-2 focus:ring-orange-500">
+    <SelectValue placeholder="Select marketing service" />
+  </SelectTrigger>
+  <SelectContent className="bg-gray-900 border border-white/30 z-[9999] w-screen sm:w-auto min-w-[250px] max-h-80 overflow-y-auto rounded-md shadow-lg">
+    <SelectItem value="growth-marketing" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">Growth Marketing</SelectItem>
+    <SelectItem value="seo" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">SEO & Technical SEO</SelectItem>
+    <SelectItem value="sem" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">SEM & Paid Advertising</SelectItem>
+    <SelectItem value="social-media" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">Social Media Marketing</SelectItem>
+    <SelectItem value="email-marketing" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">Email Marketing & Automation</SelectItem>
+    <SelectItem value="content-marketing" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">Content Marketing</SelectItem>
+    <SelectItem value="cro" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">Conversion Rate Optimization (CRO)</SelectItem>
+    <SelectItem value="analytics" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">Analytics & Reporting</SelectItem>
+    <SelectItem value="marketing-automation" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">Marketing Automation</SelectItem>
+  </SelectContent>
+</Select>
          </div>
         </div>
 
