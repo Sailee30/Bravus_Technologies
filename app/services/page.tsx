@@ -60,7 +60,7 @@ const services = [
     title: "Cloud Migration & Operations",
     description:
       "Cloud strategy (AWS / GCP / Azure), Lift-and-shift / re-architect, Infra as Code, Cost optimization, Managed cloud ops.",
-    link: "/services/cloud-migration",
+    link: "/services/Cloud-Migration",
     icon: (
       <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg sm:rounded-xl lg:rounded-2xl p-2.5 sm:p-3 lg:p-4 w-fit mb-2 sm:mb-3 lg:mb-4 flex-shrink-0">
         <Cloud className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white" />
@@ -71,7 +71,7 @@ const services = [
     title: "DevOps & CI/CD Automation",
     description:
       "CI/CD pipelines, Containerization (Docker / Kubernetes), Monitoring & observability, Automated deployments, IaC (Terraform/CloudFormation).",
-    link: "/services/devops-cicd",
+    link: "/services/DevOps",
     icon: (
       <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg sm:rounded-xl lg:rounded-2xl p-2.5 sm:p-3 lg:p-4 w-fit mb-2 sm:mb-3 lg:mb-4 flex-shrink-0">
         <Zap className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white" />
@@ -82,7 +82,7 @@ const services = [
     title: "Data Engineering & Analytics",
     description:
       "ETL / data pipelines, Data lakes/warehouses, BI dashboards, Real-time streaming, Data governance.",
-    link: "/services/data-engineering",
+    link: "/services/Data-Engineering",
     icon: (
       <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg sm:rounded-xl lg:rounded-2xl p-2.5 sm:p-3 lg:p-4 w-fit mb-2 sm:mb-3 lg:mb-4 flex-shrink-0">
         <Globe className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white" />
@@ -93,7 +93,7 @@ const services = [
     title: "API Design & Integrations",
     description:
       "REST / GraphQL APIs, Third-party integrations (payment, shipping, auth), API docs & SDKs, Webhooks.",
-    link: "/services/api-design",
+    link: "/services/API-Design",
     icon: (
       <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg sm:rounded-xl lg:rounded-2xl p-2.5 sm:p-3 lg:p-4 w-fit mb-2 sm:mb-3 lg:mb-4 flex-shrink-0">
         <Code className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white" />
@@ -137,7 +137,7 @@ const services = [
     title: "Growth Marketing",
     description:
       "Data-driven marketing strategies, conversion optimization, and growth hacking techniques that accelerate customer acquisition.",
-    link: "/services/growth-marketing",
+    link: "/services/Growth-Marketing",
     icon: (
       <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg sm:rounded-xl lg:rounded-2xl p-2.5 sm:p-3 lg:p-4 w-fit mb-2 sm:mb-3 lg:mb-4 flex-shrink-0">
         <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white" />
@@ -148,7 +148,7 @@ const services = [
     title: "SEO & Technical SEO",
     description:
       "Audit, on-page, off-page, site architecture, schema, speed improvements.",
-    link: "/services/seo",
+    link:"/services/SEO",
     icon: (
       <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg sm:rounded-xl lg:rounded-2xl p-2.5 sm:p-3 lg:p-4 w-fit mb-2 sm:mb-3 lg:mb-4 flex-shrink-0">
         <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white" />
@@ -159,7 +159,7 @@ const services = [
     title: "SEM & Paid Advertising",
     description:
       "Google Ads, Bing, Display, Shopping ads, performance campaigns.",
-    link: "/services/sem-ads",
+    link: "/services/SEM",
     icon: (
       <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg sm:rounded-xl lg:rounded-2xl p-2.5 sm:p-3 lg:p-4 w-fit mb-2 sm:mb-3 lg:mb-4 flex-shrink-0">
         <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white" />
@@ -170,7 +170,7 @@ const services = [
     title: "Social Media Marketing",
     description:
       "Strategy, community management, creatives, paid social.",
-    link: "/services/social-media",
+    link: "/services/Social-Media",
     icon: (
       <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg sm:rounded-xl lg:rounded-2xl p-2.5 sm:p-3 lg:p-4 w-fit mb-2 sm:mb-3 lg:mb-4 flex-shrink-0">
         <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white" />
@@ -214,7 +214,7 @@ const services = [
     title: "Analytics & Reporting",
     description:
       "GA4 setup, dashboards, event tracking, KPI reporting.",
-    link: "/services/analytics",
+    link: "/services/Analytics-Reporting",
     icon: (
       <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg sm:rounded-xl lg:rounded-2xl p-2.5 sm:p-3 lg:p-4 w-fit mb-2 sm:mb-3 lg:mb-4 flex-shrink-0">
         <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white" />
@@ -225,7 +225,7 @@ const services = [
     title: "Marketing Automation",
     description:
       "HubSpot/ActiveCampaign/other setups, lead scoring, workflows.",
-    link: "/services/marketing-automation",
+    link: "/services/Marketing-Automation",
     icon: (
       <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg sm:rounded-xl lg:rounded-2xl p-2.5 sm:p-3 lg:p-4 w-fit mb-2 sm:mb-3 lg:mb-4 flex-shrink-0">
         <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white" />

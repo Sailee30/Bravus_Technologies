@@ -167,7 +167,7 @@ export default function AIMLPage() {
                     <IconComponent className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-lg sm:text-xl font-semibold mb-3">{service.title}</h3>
-                  <p className="text-xs sm:text-sm text-white/70 leading-relaxed">{service.description}</p>
+                  <p className="text-xs sm:text-xs sm:text-sm text-white/70 leading-relaxed">{service.description}</p>
                 </div>
               )
             })}
@@ -191,8 +191,8 @@ export default function AIMLPage() {
                 <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">
                   {step.step}
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold mb-3">{step.title}</h3>
-                <p className="text-xs sm:text-sm text-white/70 leading-relaxed">{step.description}</p>
+                <h3 className="text-lg sm:text-lg sm:text-xl font-semibold mb-3">{step.title}</h3>
+                <p className="text-xs sm:text-xs sm:text-sm text-white/70 leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>

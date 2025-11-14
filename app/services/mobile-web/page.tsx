@@ -192,7 +192,7 @@ export default function MobileWebPage() {
                     <IconComponent className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-lg sm:text-xl font-semibold mb-3">{service.title}</h3>
-                  <p className="text-xs sm:text-sm text-white/70 leading-relaxed">{service.description}</p>
+                  <p className="text-xs sm:text-xs sm:text-sm text-white/70 leading-relaxed">{service.description}</p>
                 </div>
               )
             })}
@@ -215,7 +215,7 @@ export default function MobileWebPage() {
                   {step.step}
                 </div>
                 <h3 className="text-lg sm:text-xl font-semibold mb-3">{step.title}</h3>
-                <p className="text-xs sm:text-sm text-white/70 leading-relaxed">{step.description}</p>
+                <p className="text-xs sm:text-xs sm:text-sm text-white/70 leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>
@@ -262,7 +262,7 @@ export default function MobileWebPage() {
                   </div>
                   <div>
                     <h3 className="text-lg sm:text-xl font-semibold mb-2">{benefit.title}</h3>
-                    <p className="text-xs sm:text-sm text-white/70 leading-relaxed">{benefit.description}</p>
+                    <p className="text-xs sm:text-xs sm:text-sm text-white/70 leading-relaxed">{benefit.description}</p>
                   </div>
                 </div>
               )

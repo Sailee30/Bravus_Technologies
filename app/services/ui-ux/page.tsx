@@ -127,10 +127,10 @@ export default function UIUXPage() {
               <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-6">
                 <Palette className="w-8 h-8 text-white" />
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-balance">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance">
                 UI/UX <span className="text-orange-500">Design</span>
               </h1>
-              <p className="text-xl text-white/70 mb-8 text-pretty">
+              <p className="text-base sm:text-lg md:text-xl text-white/70 mb-8 text-pretty">
                 Create intuitive and engaging user experiences that drive conversions, enhance customer satisfaction,
                 and build lasting brand loyalty.
               </p>
@@ -180,7 +180,7 @@ export default function UIUXPage() {
             <p className="text-lg text-white/70">Comprehensive design solutions for digital products</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {services.map((service, index) => {
               const IconComponent = service.icon
               return (
@@ -191,8 +191,8 @@ export default function UIUXPage() {
                   <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mb-4">
                     <IconComponent className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                  <p className="text-white/70 leading-relaxed">{service.description}</p>
+                  <h3 className="text-lg sm:text-xl font-semibold mb-3">{service.title}</h3>
+                  <p className="text-xs sm:text-sm text-white/70 leading-relaxed">{service.description}</p>
                 </div>
               )
             })}
@@ -208,14 +208,14 @@ export default function UIUXPage() {
             <p className="text-lg text-white/70">User-centered design methodology for optimal results</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {processSteps.map((step, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">
                   {step.step}
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
-                <p className="text-white/70 text-sm leading-relaxed">{step.description}</p>
+                <h3 className="text-lg sm:text-xl font-semibold mb-3">{step.title}</h3>
+                <p className="text-white/70 text-xs sm:text-sm leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>
@@ -252,7 +252,7 @@ export default function UIUXPage() {
             <p className="text-lg text-white/70">How great design transforms your business</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon
               return (
@@ -261,7 +261,7 @@ export default function UIUXPage() {
                     <IconComponent className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
+                    <h3 className="text-lg sm:text-xl font-semibold mb-2">{benefit.title}</h3>
                     <p className="text-white/70 leading-relaxed">{benefit.description}</p>
                   </div>
                 </div>
