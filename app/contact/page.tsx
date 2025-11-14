@@ -103,7 +103,7 @@ const marketingServices = [
     {
       name: "Instagram",
       icon: Instagram,
-      url: "https://instagram.com/bravustech",
+      url: "https://www.instagram.com/bravustechnologies_?igsh=eTBqeTVzNXkweTJr",
       color: "text-pink-500 hover:text-pink-400",
     },
     {
