@@ -118,7 +118,7 @@ const ModernContactForm = ({
     <SelectValue placeholder="Select a service" className="text-white" />
   </SelectTrigger>
   <SelectContent className="bg-gray-900 border border-white/30 z-[9999] w-screen sm:w-auto min-w-[250px] max-h-80 overflow-y-auto rounded-md shadow-lg">
-    <SelectItem value="custom-software" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">Custom Software Development</SelectItem>
+    <SelectItem value="custom-software" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3 data-[state=checked]:bg-orange-500 data-[state=checked]:text-white">Custom Software Development</SelectItem>
     <SelectItem value="ai-ml" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">AI/ML Solutions</SelectItem>
     <SelectItem value="mobile-web" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">Mobile & Web Development</SelectItem>
     <SelectItem value="cloud-migration" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">Cloud Migration & Operations</SelectItem>
@@ -130,7 +130,7 @@ const ModernContactForm = ({
     <SelectItem value="ui-ux" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">UI/UX Design</SelectItem>
   </SelectContent>
 </Select>
-</div>
+</div> 
 
         <div className="space-y-2">
           <Label htmlFor="marketing" className="text-sm font-medium text-white">
