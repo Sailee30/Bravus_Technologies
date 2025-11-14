@@ -119,15 +119,15 @@ const ModernContactForm = ({
   </SelectTrigger>
   <SelectContent className="bg-gray-900 border border-white/30 z-[9999] w-screen sm:w-auto min-w-[250px] max-h-80 overflow-y-auto rounded-md shadow-lg">
     <SelectItem value="custom-software" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3 data-[state=checked]:bg-orange-500 data-[state=checked]:text-white">Custom Software Development</SelectItem>
-    <SelectItem value="ai-ml" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">AI/ML Solutions</SelectItem>
-    <SelectItem value="mobile-web" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">Mobile & Web Development</SelectItem>
-    <SelectItem value="cloud-migration" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">Cloud Migration & Operations</SelectItem>
-    <SelectItem value="devops" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">DevOps & CI/CD Automation</SelectItem>
-    <SelectItem value="data-engineering" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">Data Engineering & Analytics</SelectItem>
-    <SelectItem value="api-design" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">API Design & Integrations</SelectItem>
-    <SelectItem value="qa-testing" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">QA & Test Automation</SelectItem>
-    <SelectItem value="saas" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">SaaS Product Development</SelectItem>
-    <SelectItem value="ui-ux" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">UI/UX Design</SelectItem>
+    <SelectItem value="ai-ml" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3 data-[state=checked]:bg-orange-500 data-[state=checked]:text-white3">AI/ML Solutions</SelectItem>
+    <SelectItem value="mobile-web" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3 data-[state=checked]:bg-orange-500 data-[state=checked]:text-white">Mobile & Web Development</SelectItem>
+    <SelectItem value="cloud-migration" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3 data-[state=checked]:bg-orange-500 data-[state=checked]:text-white">Cloud Migration & Operations</SelectItem>
+    <SelectItem value="devops" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3 data-[state=checked]:bg-orange-500 data-[state=checked]:text-white">DevOps & CI/CD Automation</SelectItem>
+    <SelectItem value="data-engineering" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3 data-[state=checked]:bg-orange-500 data-[state=checked]:text-white">Data Engineering & Analytics</SelectItem>
+    <SelectItem value="api-design" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3 data-[state=checked]:bg-orange-500 data-[state=checked]:text-white">API Design & Integrations</SelectItem>
+    <SelectItem value="qa-testing" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3 data-[state=checked]:bg-orange-500 data-[state=checked]:text-white">QA & Test Automation</SelectItem>
+    <SelectItem value="saas" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3 data-[state=checked]:bg-orange-500 data-[state=checked]:text-white">SaaS Product Development</SelectItem>
+    <SelectItem value="ui-ux" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3 data-[state=checked]:bg-orange-500 data-[state=checked]:text-white">UI/UX Design</SelectItem>
   </SelectContent>
 </Select>
 </div> 
@@ -141,15 +141,15 @@ const ModernContactForm = ({
     <SelectValue placeholder="Select marketing service" className="text-white" />
   </SelectTrigger>
   <SelectContent className="bg-gray-900 border border-white/30 z-[9999] w-screen sm:w-auto min-w-[250px] max-h-80 overflow-y-auto rounded-md shadow-lg">
-    <SelectItem value="growth-marketing" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">Growth Marketing</SelectItem>
-    <SelectItem value="seo" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">SEO & Technical SEO</SelectItem>
-    <SelectItem value="sem" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">SEM & Paid Advertising</SelectItem>
-    <SelectItem value="social-media" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">Social Media Marketing</SelectItem>
-    <SelectItem value="email-marketing" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">Email Marketing & Automation</SelectItem>
-    <SelectItem value="content-marketing" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">Content Marketing</SelectItem>
-    <SelectItem value="cro" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">Conversion Rate Optimization (CRO)</SelectItem>
-    <SelectItem value="analytics" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">Analytics & Reporting</SelectItem>
-    <SelectItem value="marketing-automation" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3">Marketing Automation</SelectItem>
+    <SelectItem value="growth-marketing" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3 data-[state=checked]:bg-orange-500 data-[state=checked]:text-white">Growth Marketing</SelectItem>
+    <SelectItem value="seo" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3 data-[state=checked]:bg-orange-500 data-[state=checked]:text-white">SEO & Technical SEO</SelectItem>
+    <SelectItem value="sem" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3 data-[state=checked]:bg-orange-500 data-[state=checked]:text-white">SEM & Paid Advertising</SelectItem>
+    <SelectItem value="social-media" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3 data-[state=checked]:bg-orange-500 data-[state=checked]:text-white">Social Media Marketing</SelectItem>
+    <SelectItem value="email-marketing" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3 data-[state=checked]:bg-orange-500 data-[state=checked]:text-white">Email Marketing & Automation</SelectItem>
+    <SelectItem value="content-marketing" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3 data-[state=checked]:bg-orange-500 data-[state=checked]:text-white">Content Marketing</SelectItem>
+    <SelectItem value="cro" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3 data-[state=checked]:bg-orange-500 data-[state=checked]:text-white">Conversion Rate Optimization (CRO)</SelectItem>
+    <SelectItem value="analytics" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3 data-[state=checked]:bg-orange-500 data-[state=checked]:text-white">Analytics & Reporting</SelectItem>
+    <SelectItem value="marketing-automation" className="cursor-pointer hover:bg-orange-500/20 focus:bg-orange-500/20 text-white text-sm py-2 px-3 data-[state=checked]:bg-orange-500 data-[state=checked]:text-white">Marketing Automation</SelectItem>
   </SelectContent>
 </Select>
          </div>
