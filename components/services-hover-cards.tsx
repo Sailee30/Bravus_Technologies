@@ -110,14 +110,23 @@ export const allServices = [...technicalServices.slice(0, 6), ...marketingServic
 
 export function ServicesHoverCards({
   showAll = false,
+  limitToThree = false,
   className = "",
 }: {
   showAll?: boolean
+  limitToThree?: boolean
   className?: string
 }) {
-  // Show all services on desktop (lg and above), or if showAll is true
-  // Show first 6 on mobile by default
-  const displayedServices = showAll ? allServices : allServices.slice(0, 6)
+  // Show 3 services on mobile (limitToThree=true && showAll=false)
+  // Show 6 services on desktop by default or mobile with showAll=true
+  // Show all services if showAll=true on desktop
+  let displayedServices = allServices
+
+  if (limitToThree && !showAll) {
+    displayedServices = allServices.slice(0, 3)
+  } else if (!showAll) {
+    displayedServices = allServices.slice(0, 6)
+  }
 
   return (
     <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
