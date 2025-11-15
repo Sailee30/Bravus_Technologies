@@ -17,6 +17,7 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 const [currentSlide, setCurrentSlide] = useState(0)
 const [showAll, setShowAll] = useState(false)
 const [testimonialsPerSlide, setTestimonialsPerSlide] = useState(3)
+const [isMobile, setIsMobile] = useState(false)
 
   const testimonials = [
     {
@@ -90,29 +91,27 @@ const [testimonialsPerSlide, setTestimonialsPerSlide] = useState(3)
     return testimonials.slice(start, start + testimonialsPerSlide)
   }
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 768) {
-        setMobileMenuOpen(false)
-      }
+useEffect(() => {
+  const handleResize = () => {
+    if (window.innerWidth >= 768) {
+      setMobileMenuOpen(false)
     }
+  }
+  window.addEventListener("resize", handleResize)
+  return () => window.removeEventListener("resize", handleResize)
+}, [])
 
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
+// Auto-advance carousel - Simplified continuous running
+useEffect(() => {
+  const timer = setInterval(() => {
+    setCurrentSlide(prevSlide => {
+      return (prevSlide + 1) % totalSlides
+    })
+  }, 3000)
+  return () => clearInterval(timer)
+}, [totalSlides])
 
-  // Auto-advance carousel - Simplified continuous running
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide(prevSlide => {
-        return (prevSlide + 1) % totalSlides
-      })
-    }, 3000)
-
-    return () => clearInterval(timer)
-  }, [])
-
-  useEffect(() => {
+useEffect(() => {
   const handleResize = () => {
     if (window.innerWidth < 768) {
       setTestimonialsPerSlide(1)
@@ -120,11 +119,20 @@ const [testimonialsPerSlide, setTestimonialsPerSlide] = useState(3)
       setTestimonialsPerSlide(3)
     }
   }
-
   handleResize()
   window.addEventListener("resize", handleResize)
   return () => window.removeEventListener("resize", handleResize)
 }, [])
+
+useEffect(() => {
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 1024)
+  }
+  handleResize()
+  window.addEventListener("resize", handleResize)
+  return () => window.removeEventListener("resize", handleResize)
+}, [])
+
 
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
@@ -904,16 +912,21 @@ const [testimonialsPerSlide, setTestimonialsPerSlide] = useState(3)
             </p>
           </div>
 
-          <ServicesHoverCards showAll={showAll} />
+          <ServicesHoverCards 
+            showAll={showAll} 
+            limitToThree={isMobile && !showAll} 
+          />
 
-          <div className="text-center mt-16 lg:hidden">
-            <button
-              onClick={() => setShowAll(!showAll)}
-              className="group relative bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-3 rounded-lg text-lg font-semibold flex items-center gap-2 backdrop-blur-sm border border-orange-400/30 shadow-lg shadow-orange-500/25 hover:shadow-xl hover:shadow-orange-500/40 transition-all duration-300 hover:scale-105 mx-auto"
-            >
-              {showAll ? "Show Less" : "View More"}
-              <ArrowRight className={`w-5 h-5 transition-transform duration-300 ${showAll ? "rotate-90" : ""}`} />
-            </button>
+          <div className="text-center mt-16">
+            {isMobile && (
+              <button
+                onClick={() => setShowAll(!showAll)}
+                className="group relative bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-3 rounded-lg text-lg font-semibold flex items-center gap-2 backdrop-blur-sm border border-orange-400/30 shadow-lg shadow-orange-500/25 hover:shadow-xl hover:shadow-orange-500/40 transition-all duration-300 hover:scale-105 mx-auto"
+              >
+                {showAll ? "Show Less" : "View More"}
+                <ArrowRight className={`w-5 h-5 transition-transform duration-300 ${showAll ? "rotate-90" : ""}`} />
+              </button>
+              )}
           </div>
         </div>
       </section>
