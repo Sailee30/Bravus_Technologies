@@ -1094,7 +1094,7 @@ const [testimonialsPerSlide, setTestimonialsPerSlide] = useState(3)
             </Link>
 
           <a 
-            href="https://calendly.com/saileechavan04"
+            href="https://calendly.com/hemantpardeshi683/30min"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto"
