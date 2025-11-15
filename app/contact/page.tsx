@@ -115,7 +115,7 @@ const marketingServices = [
     {
       name: "LinkedIn",
       icon: Linkedin,
-      url: "https://linkedin.com/company/bravustech",
+      url: "https://www.linkedin.com/company/bravus-technologies/",
       color: "text-blue-700 hover:text-blue-600",
     },
   ]
